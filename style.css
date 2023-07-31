@@ -136,7 +136,10 @@ main .readmore {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
-
+#burger,
+#close {
+  display: none;
+}
 .first p,
 .second p,
 .third p {
@@ -183,19 +186,84 @@ section .content-01,
   color: var(--Dark-grayish-blue);
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
   * {
     margin: 0;
+  }
+  header {
+    margin-inline: 1rem;
+    margin-block: 1rem;
+  }
+  ul {
+    flex-direction: column;
   }
   main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
-
     margin-inline: 1.5rem;
+    grid-template-areas: "image" "bright" "readmore" "article";
+    height: 100%;
+  }
+  #content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: pink;
+    transition: right 1s ease;
+  }
+  #bg {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  #burger {
+    margin-block: 1rem;
+    display: block;
+  }
+  ul {
+    margin-block: 7rem;
+  }
+  li {
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: block;
+  }
+  .image {
+    grid-area: image;
+  }
+  .bright {
+    grid-area: bright;
+  }
+  .readmore {
+    grid-area: readmore;
   }
   .desktop-image img {
-    width: 327px;
+    width: 330px;
     height: 250px;
+  }
+  .bottom-content {
+    grid-template-columns: 1fr;
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+  .bottom-content h2 {
+    margin-block: 1rem;
+  }
+  .sidebar h1 {
+    margin-block: 1.5rem;
   }
 }

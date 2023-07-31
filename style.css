@@ -273,3 +273,49 @@ section .content-01,
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #burger,
+  #close {
+    display: none;
+  }
+  header {
+    margin-inline: 2rem;
+  }
+  main {
+    height: 600px;
+    gap: 1.5rem;
+    margin-inline: 2rem;
+  }
+  .desktop-image img {
+    object-fit: cover;
+    width: max(100%, 150px);
+    height: 300px;
+  }
+  .bright h1 {
+    font-size: clamp(2rem, 5vh, 7rem);
+  }
+  .sidebar {
+    height: 1000px;
+  }
+  .readmore :is(p) {
+    margin-bottom: 1rem;
+  }
+  .bottom-content {
+    display: grid;
+    margin-inline: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "content-01 content-01" "content-02 content-03";
+  }
+  .bottom-content section:first-child {
+    grid-area: content-01;
+    width: 300px;
+    padding-inline: 16rem;
+  }
+  .bottom-content .content-02 {
+    grid-area: two;
+  }
+  .bottom-content .content-03 {
+    grid-area: content-03;
+  }
+}

@@ -31,13 +31,29 @@
       <nav>
         <div><img src="assets/images/logo.svg" alt="logo" /></div>
         <div>
-          <ul>
-            <li>Home</li>
-            <li>New</li>
-            <li>Popular</li>
-            <li>Trending</li>
-            <li>Categories</li>
-          </ul>
+          <img
+            src="assets/images/icon-menu.svg"
+            alt=""
+            id="burger"
+            onclick="handleMenu()"
+          />
+        </div>
+        <div id="bg">
+          <div id="content">
+            <img
+              src="assets/images/icon-menu-close.svg"
+              alt=""
+              id="close"
+              onclick="handleClose()"
+            />
+            <ul>
+              <li>Home</li>
+              <li>New</li>
+              <li>Popular</li>
+              <li>Trending</li>
+              <li>Categories</li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -146,5 +162,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

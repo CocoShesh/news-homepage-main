@@ -45,7 +45,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr auto;
-  height: 550px;
+  height: 600px;
   margin-inline: 6rem;
   margin-bottom: 4rem;
   gap: 2rem;

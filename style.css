@@ -198,8 +198,7 @@ section .content-01,
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
-
-    margin-inline: clamp(0.5rem, 5rem, 10rem);
+    margin-inline: clamp(0.5rem, 5rem, 2rem);
     grid-template-areas: "image" "bright" "readmore" "article";
     height: 100%;
   }
@@ -209,7 +208,7 @@ section .content-01,
     top: 0;
     height: 100%;
     width: 250px;
-    background: white;
+    background: pink;
     transition: right 1s ease;
   }
   #bg {
@@ -225,6 +224,8 @@ section .content-01,
   #burger {
     margin-block: 1rem;
     display: block;
+    width: 30px;
+    height: 20px;
   }
   ul {
     margin-block: 7rem;
@@ -265,6 +266,9 @@ section .content-01,
   .sidebar h1 {
     margin-block: 1.5rem;
   }
+}
+.sidebar {
+  margin-inline: auto;
 }
 
 @media screen and (min-width: 1024px) {
